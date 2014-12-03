@@ -1,0 +1,7 @@
+{
+    "name": "AppsMallTheme",
+    "description": "This is a theme for appsmall",
+    "version": "0.1.0",
+    "theme": true,
+    "stylesheet": "stylesheets/theme.less"
+}
