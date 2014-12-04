@@ -1,25 +1,28 @@
 .widget {
-  border: 0;
-  border-radius: 3px;
-  background: @theme-color-background-tinyContrast;
-  -webkit-box-shadow: 0 6px 12px @theme-color-widget-shadow;
-  -moz-box-shadow: 0 6px 12px @theme-color-widget-shadow;
-  box-shadow: 0 6px 12px @theme-color-widget-shadow;
+    border: 0;
+    border-radius: 3px;
+    background: @theme-color-background-tinyContrast;
+    -webkit-box-shadow: 0 6px 12px @theme-color-widget-shadow;
+    -moz-box-shadow: 0 6px 12px @theme-color-widget-shadow;
+    box-shadow: 0 6px 12px @theme-color-widget-shadow;
 }
 
-.widgetTop {
-  background: @theme-color-background-lowContrast;
-}
+    .widget .widgetTop {
+        background: @theme-color-background-lowContrast;
+        border: 0;
+    }
 
-.widgetName {
-  text-shadow: none;
-  color: @theme-color-text-lighter;
-}
+        .widget .widgetTop .widgetName {
+            text-shadow: none;
+            padding: 10px 15px 5px;
+            font-weight: bold;
+            color: @theme-color-text-lighter;
+        }
 
-.ui-dialog-content .widgetName,
-.widget:hover .widgetName {
-  color: @theme-color-text-light;
-}
+    .ui-dialog-content .widgetName,
+    .widget:hover .widgetName {
+        color: @theme-color-text-light;
+    }
 
 /* RSS 
 .rss-title {
