@@ -1,67 +1,76 @@
-@import "_colors.less";
-@import "_variables.less";
+@theme-fontFamily-base: Ubuntu, Calibri, sans-serif;
 
-#root * { font-family: Ubuntu, Calibri; }
+@theme-color-background-base: #141414;
+@theme-color-background-contrast: #5F5A60;
+@theme-color-background-smallContrast: #202020;
+@theme-color-background-lighter: #888;
+@theme-color-highlight1: #766F31;
+@theme-color-highlight2: #6C9C50;
+@theme-color-highlight3: #67E750;
 
-#root .pageWrap { background: #f4f7f8; }
+@theme-color-text-link: @theme-color-highlight2;
+@theme-color-text-base: #59867D;
+@theme-color-text-lightFocus: #AAA;
+@theme-color-text-focus: @theme-color-highlight3;
+@theme-color-text-active: @theme-color-highlight1;
+@theme-color-box-border: @theme-color-background-contrast;
+@theme-color-box-active: @theme-color-background-smallContrast;
 
-body #root .nav_sep { background: #fff; }
+/*@theme-color-brand:                    #d4291f;
+@theme-color-brand-contrast:           #ffffff;
 
+@theme-color-widget-title-text:        #0d0d0d;
+@theme-color-widget-title-background:  #f2f2f2;
 
-body #root 
-  { background: #191f25; }
+@theme-color-menu-contrast-text:       #666666;
+@theme-color-menu-contrast-textActive: #0d0d0d;
+@theme-color-menu-contrast-background: #f2f2f2;
 
-body #root .nav_sep, 
-body #root .pageWrap, 
-body #root #header 
-  { background: #191f25; border: 0; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none }
+@theme-color-text:                     #0d0d0d;
+@theme-color-text-light:               #444444;
+@theme-color-text-lighter:             #666666;
+@theme-color-link:                     #1e93d1;
 
-body #root #header 
-  { margin-top: 40px; }
+@theme-color-background-base:          #fff;
+@theme-color-background-tinyContrast:  #f2f2f2;
+@theme-color-background-lowContrast:   #cccccc;
+@theme-color-background-contrast:      #5F5A60;
+@theme-color-background-highContrast:  #202020;
+@theme-color-base-series:              #ee3024;
 
-body #root #header .topBarElem strong 
-  { color: #aaa; }
-
-body #root #logo,
-body #root #logo a
-  { font-size: 18pt; color: #fff; padding: 15px 0; }
-
-
-/* WIDGET */
-
-body #root #content:not(.admin) .widget, #root .widget .widget, 
-body #root #content:not(.admin) .widget .widgetTop, 
-body #root .widget .widget .widgetTop 
-  { background: #fff; border-color: #f4f7f8; }
-
-body #root .widget .widgetTop .widgetName 
-  { padding: 5px 10px 0 10px; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; color: #888; }
-
-.widget .widgetTop .button { margin: 5px 10px 0 0; }
-.widget .widgetTop .button img { width: 10px; }
-
-body #root table.dataTable tr td.labelodd, #root table.dataTable tr td.columnodd { background: #f4f7f8 !important; }
-
-
-/* NAV */
-
-body #root .Menu--dashboard 
-  { border: 0; border-bottom: 5px solid #2b3036; }
-
-body #root .Menu--dashboard > .Menu-tabList > li 
-  { border: 0; }
-body #root .Menu--dashboard > .Menu-tabList a 
-  { font-family: Ubuntu; font-size: 12pt; font-weight: bold; color: #aaa; height: auto; padding: 10px 20px; }
-body #root .Menu--dashboard > .Menu-tabList > li.sfHover > a
-  { color: #009dd3; background: #2b3036; }
-body #root .Menu--dashboard > .Menu-tabList > li.sfActive > a:after 
-  { background: #009dd3; bottom: -3px; }
+@graph-colors-data-series1: #d4291f;
+@graph-colors-data-series2: #1f78b4;
+@graph-colors-data-series3: #ff7f00;
+@graph-colors-data-series4: #33a02c;
+@graph-colors-data-series5: #6a3d9a;
+@graph-colors-data-series6: #b15928;
+@graph-colors-data-series7: #fdbf6f;
+@graph-colors-data-series8: #cab2d6;*/
 
 
-/* SUB NAV */
-
-body #root .Menu--dashboard > .Menu-tabList > li > ul li a 
-  { font-family: Ubuntu; padding: 10px; font-weight: normal; font-size: 10pt; color: #eee; }
-body #root .Menu--dashboard > .Menu-tabList > li > ul li a:hover 
-  { color: #009dd3; } 
-
+@import "_general.less";
+@import "_layout.less";
+@import "_login.less";
+@import "_admin.less";
+@import "_menuDashboard.less";
+@import "_menuAdmin.less";
+@import "_widget.less";
+@import "_dataTable.less";
+@import "_sparklineColors.less";
+@import "_jqplot.less";
+@import "_jqplotColors.less";
+@import "_ui.less";
+@import "_transitionColors.less";
+@import "_map.less";
+@import "controls/_periodSelect.less";
+@import "controls/_segmentSelect.less";
+@import "controls/_widgetSelect.less";
+@import "controls/_headerMessage.less";
+@import "controls/_siteSelect.less";
+@import "plugins/_multiSites.less";
+@import "plugins/_referrers.less";
+@import "plugins/_userManager.less";
+@import "plugins/_userCountry.less";
+@import "plugins/_dbStats.less";
+@import "plugins/_installation.less";
+@import "plugins/_live.less";
