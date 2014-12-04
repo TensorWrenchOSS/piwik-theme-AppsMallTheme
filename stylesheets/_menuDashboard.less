@@ -1,40 +1,36 @@
+
 /* FIRST LEVEL */
 
-.Menu--dashboard {
+#root .Menu--dashboard {
     border: 0;
     border-bottom: 5px solid @theme-color-background-tinyContrast;
 }
 
-    .Menu--dashboard > .Menu-tabList {
-
+    #root .Menu--dashboard > .Menu-tabList > li {
+        border: 0;
     }
 
-        .Menu--dashboard > .Menu-tabList > li {
+    #root .Menu--dashboard > .Menu-tabList > a {
+        padding: 10px 20px 10px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+        #root .Menu--dashboard > .Menu-tabList > li.sfHover > a {
+            background: @theme-color-background-tinyContrast;
             border: 0;
-        }
-
-        .Menu--dashboard > .Menu-tabList > a {
-            padding: 10px 20px 10px;
-            font-size: 15px;
-            font-weight: bold;
-        }
-
-            .Menu--dashboard > .Menu-tabList > li.sfHover > a {
-                background: @theme-color-background-tinyContrast;
-                border: 0;
-            } 
+        } 
         
-            .Menu--dashboard > .Menu-tabList > li.sfActive > a
-            {
-                background: @theme-color-background-tinyContrast;
-                color: @theme-color-link;
-            }
+        #root .Menu--dashboard > .Menu-tabList > li.sfActive > a {
+            background: @theme-color-background-tinyContrast;
+            color: @theme-color-link;
+        }
 
 
 
 /* SECOND LEVEL */
 
-.nav_sep {
+#root .nav_sep {
     border: 0;
     min-height: 47px;
     -webkit-box-shadow: none;
@@ -43,24 +39,22 @@
     background: @theme-color-base-series;
 }
 
-.Menu--dashboard > .Menu-tabList > li ul li > a {
+#root .Menu--dashboard > .Menu-tabList > li ul li > a {
     padding: 10px 20px 10px;
     font-size: 13px;
     line-height: 15px;
 }
 
-    .Menu--dashboard > .Menu-tabList > li li:hover > a,
-    .Menu--dashboard > .Menu-tabList > li li.sfHover > a,
-    .Menu--dashboard > .Menu-tabList > li li:focus > a,
-    .Menu--dashboard > .Menu-tabList > li li:active > a {
+    #root .Menu--dashboard > .Menu-tabList > li li:hover > a,
+    #root .Menu--dashboard > .Menu-tabList > li li.sfHover > a,
+    #root .Menu--dashboard > .Menu-tabList > li li:focus > a,
+    #root .Menu--dashboard > .Menu-tabList > li li:active > a {
     }
 
 
 
 
 /*
-
-
 @media all and (max-width: 749px) {
     .Menu--dashboard > .Menu-tabList > li {
         margin-right: 2px;
