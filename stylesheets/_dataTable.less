@@ -9,8 +9,8 @@ table.dataTable {
 /* Header */
 table.dataTable th,
 table.dataTable th.columnSorted {
-  background: @theme-color-background-smallContrast;
-  color: @theme-color-text-base;
+  background: @theme-color-background-lowContrast;
+  color: @theme-color-text;
   border-left: 0;
   vertical-align: bottom;
 }
@@ -38,11 +38,11 @@ table.dataTable th .columnDocumentation {
   border: 1px solid @theme-color-background-contrast;
   border-radius: 0;
   box-shadow: none;
-  color: @theme-color-text-base;
+  color: @theme-color-text;
 }
 
 table.dataTable th .columnDocumentationTitle {
-  color: @theme-color-text-active;
+  color: @theme-color-text;
   font-weight: normal;
 }
 
@@ -51,14 +51,14 @@ table.dataTable td,
 table.subDataTable td.labeleven,
 table.subDataTable td.columneven,
 table.dataTable td a {
-  color: @theme-color-text-base;
+  color: @theme-color-text;
 }
 
 table.dataTable td,
 table.dataTable td.label,
 table.dataTable td.column {
   background-color: @theme-color-background-base;
-  border: 1px solid @theme-color-background-smallContrast;
+  border: 1px solid @theme-color-background-lowContrast;
 }
 
 table.dataTable td.column {
@@ -71,7 +71,7 @@ table.dataTable td.label {
 }
 
 table.dataTable td.highlightField {
-  background-color: #303030 !important;
+  background-color: @theme-color-background-contrast !important;
 }
 
 /* SubTable */
@@ -80,7 +80,7 @@ table.dataTable tr:hover > td.cellSubDataTable {
 }
 
 table.subDataTable thead th {
-  border: 1px solid @theme-color-background-smallContrast;
+  border: 1px solid @theme-color-background-lowContrast;
 }
 
 table.subDataTable thead th {
@@ -103,18 +103,18 @@ table.dataTable tr.subDataTable:hover > td .dataTableRowActions {
 
   table.dataTable td,
   table.dataTable td a {
-    color: @theme-color-text-lightFocus;
+    color: @theme-color-text-light;
   }
 
   table.dataTable th,
   table.dataTable tr:hover > td,
   table.dataTable tr:hover > td > a {
-    color: @theme-color-text-focus;
+    color: @theme-color-text;
   }
 
   table.dataTable td.label,
   table.dataTable td.column {
-    border-bottom-color: #404040;
+    border-bottom-color: @theme-color-background-tinyContrast;
   }
 }
 
@@ -127,22 +127,22 @@ table.dataTable tr.subDataTable:hover > td .dataTableRowActions {
 .dataTableFooterIcons a,
 .dataTableNext,
 .dataTablePrevious {
-  color: @theme-color-text-link;
+  color: @theme-color-link;
 }
 
 .dataTableNext:hover,
 .dataTablePrevious:hover {
   text-decoration: underline;
-  color: @theme-color-text-focus;
+  color: @theme-color-text;
 }
 
 .dataTablePages,
 .loadingPiwik {
-  color: @theme-color-text-base;
+  color: @theme-color-text;
 }
 
 .dataTableSearchPattern {
-  background-image: url(plugins/PleineLune/images/search_bg.png);
+  background-image: url(../images/search_bg.png);
 }
 
 .dataTableSearchPattern input {
@@ -152,34 +152,34 @@ table.dataTable tr.subDataTable:hover > td .dataTableRowActions {
 
 /* LimitSelection */
 .limitSelection > div {
-  border-color: @theme-color-background-smallContrast;
+  border-color: @theme-color-background-lowContrast;
   border-radius: 0;
 }
 
 .limitSelection > div > span {
-  color: @theme-color-text-active;
+  color: @theme-color-text;
 }
 
 .limitSelection > ul > li {
   background: @theme-color-background-base;
-  border-color: @theme-color-background-smallContrast;
+  border-color: @theme-color-background-lowContrast;
 }
 
 .limitSelection > ul > li.last {
   background: @theme-color-background-base;
-  border-color: @theme-color-background-smallContrast;
+  border-color: @theme-color-background-lowContrast;
 }
 
 .limitSelection > ul > li:hover {
-  background-color: @theme-color-background-smallContrast;
+  background-color: @theme-color-background-lowContrast;
 }
 
 .limitSelection > ul > li > span {
-  color: @theme-color-text-link;
+  color: @theme-color-link;
 }
 
 .limitSelection > ul > li:hover > span {
-  color: @theme-color-text-focus;
+  color: @theme-color-text;
 }
 
 /* TableConfiguration */
@@ -189,7 +189,7 @@ table.dataTable tr.subDataTable:hover > td .dataTableRowActions {
 
 .tableConfiguration ul li {
   background-color: @theme-color-background-base;
-  border-color: @theme-color-background-smallContrast;
+  border-color: @theme-color-background-lowContrast;
 }
 
 .tableConfiguration ul li.firstDummy,
@@ -198,47 +198,47 @@ table.dataTable tr.subDataTable:hover > td .dataTableRowActions {
 }
 
 .tableConfiguration div.configItem {
-  color: @theme-color-text-base;
+  color: @theme-color-text;
 }
 
 .tableConfiguration div.configItem:hover {
-  background-color: @theme-color-background-smallContrast;
+  background-color: @theme-color-background-lowContrast;
 }
 
 .tableConfiguration div.configItem span.action {
-  color: @theme-color-text-link;
+  color: @theme-color-link;
 }
 
 .tableConfiguration div.configItem:hover span.action {
   text-decoration: underline;
-  color: @theme-color-text-focus;
+  color: @theme-color-text;
 }
 
 /* Entity tables */
 .entityTable {
   border-top: 0 !important;
-  border-bottom: 1px solid @theme-color-background-smallContrast !important;
+  border-bottom: 1px solid @theme-color-background-lowContrast !important;
 }
 
 .entityTable tr td,
 .entityTable tr th {
   border-top: 0 !important;
-  border-bottom: 1px solid @theme-color-background-smallContrast !important;
+  border-bottom: 1px solid @theme-color-background-lowContrast !important;
 }
 
 .entityTable tr.highlighted td,
 .entityTable tr.highlighted:hover td {
-  background: #303030;
+  background: @theme-color-background-contrast;
 }
 
 /* Report documentation */
 .reportDocumentation {
   background: @theme-color-background-base;
   border: 1px solid @theme-color-background-contrast;
-  color: @theme-color-text-base;
+  color: @theme-color-text;
   border-radius: 0;
 }
 
 .reportDocumentation p {
-  color: @theme-color-text-base;
+  color: @theme-color-text;
 }
