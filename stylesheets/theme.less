@@ -396,9 +396,9 @@ table.dataTable {
     }
     tr {
         td {
-            border-color: @theme-color-background-highContrast !important;
+            border-color: @theme-color-background-contrast !important;
             color: @theme-color-text;
-            background: @theme-color-background-contrast;
+            background: @theme-color-background-lowContrast;
 
             &:not(.value) {
               .font-default(13px, 16px);
@@ -444,13 +444,13 @@ table.dataTable {
         &.subDataTable:hover > td.labeleven,
         &.subDataTable:hover > td.columneven,
         td.cellSubDataTable {
-          background-color: @theme-color-background-highContrast !important;
+          background-color: @theme-color-background-lowContrast !important;
         }
     }
 
     &.entityTable tr {
         td  {
-            background-color: @theme-color-background-highContrast !important;
+            background-color: @theme-color-background-lowContrast !important;
         }
         &.inactive-plugin td,
         &:hover td {
@@ -903,17 +903,17 @@ table#users {
 
 // previous style overrides
 
-/*#multisites table.dataTable {
+#multisites table.dataTable {
     thead tr th {
-        background: @theme-color-background-base;
+        background: @theme-color-background-tinyContrast;
     }
     td {
-        background: @theme-color-background-base;
+        background: @theme-color-background-lowContrast;
     }
     tr:hover td {
-        background: @theme-color-background-base;
+        background: @theme-color-background-contrast;
     }
     tfoot tr:hover td {
-        background: @theme-color-background-base;
+        background: @theme-color-background-contrast;
     }
-}*/
+}
