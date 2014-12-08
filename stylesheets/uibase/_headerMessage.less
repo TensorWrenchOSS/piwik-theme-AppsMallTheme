@@ -1,68 +1,57 @@
 /* About Piwik box top right */
 #header_message {
-  z-index: 0;
-  cursor: default;
-  position: absolute;
-  right: 0px;
-  overflow: hidden;
-  display: block;
-  height: auto;
-  font-weight: normal;
-  line-height: 20px;
-  padding: 15px 10px 15px 40px;
-  font-size: 16px;
-  border-radius: 0;
-  border: 0;
-  background: @theme-color-brand;
-  color: #fff;
+    z-index: 0;
+    cursor: default;
+    position: absolute;
+    right: 0px;
+    overflow: hidden;
+    display: block;
+    height: auto;
+    font-weight: normal;
+    line-height: 20px;
+    padding: 15px 10px 15px 40px;
+    font-size: 16px;
+    border-radius: 0;
+    border: 0;
+    background: @theme-color-brand;
+    color: #fff;
+
+    &:hover, &.active {
+        width: auto;
+        height: auto;
+        z-index: 150;
+        
+        .header_short { display: none; }
+        .header_full { display: block; }
+    }
+
+    .header_short {
+        display: block;
+        white-space: nowrap;
+    }
+
+    .header_full {
+        display: none;
+        padding-bottom: 5px;
+        line-height: 1.7em;
+    }
+
+    /* Orange alerts box */
+    &.header_alert {
+        background: @graph-colors-data-series4 url(plugins/Morpheus/images/ico_alert.png) no-repeat 7px 4px;
+        color: #fff;
+        a { color: #fff; }  
+    }
+
+    /* Blue info box */
+    &.header_alert {
+        background: @graph-colors-data-series7 url(plugins/Morpheus/images/ico_info.png) no-repeat 7px 4px;
+        color: #fff;
+        a { color: #fff; }  
+    }
 }
 
-#header_message:hover,
-#header_message.active {
-  width: auto;
-  height: auto;
-  z-index: 150;
-}
-
-#header_message .header_short {
-  display: block;
-  white-space: nowrap;
-}
-
-#header_message .header_full {
-  display: none;
-}
-
-#header_message:hover .header_short,
-#header_message.active .header_short {
-  display: none;
-}
-
-#header_message:hover .header_full,
-#header_message.active .header_full {
-  display: block;
-}
-
-.header_full {
-  padding-bottom: 5px;
-  line-height: 1.7em;
-}
-
-/* Orange alerts box */
-.header_alert {
-  background: @graph-colors-data-series4 url(plugins/Morpheus/images/ico_alert.png) no-repeat 7px 4px;
-}
-
-.header_alert,
-.header_alert  a {
-  color: #fff;
-}
-
-/* Blue info box */
-.header_info {
-  background: @graph-colors-data-series7 url(plugins/Morpheus/images/ico_info.png) no-repeat 7px 4px;
-}
-
-.header_info, .header_info  a {
-  color: #fff;
+.topcontrols #header_message {
+    right: -40px;
+    top: -40px;
 }
