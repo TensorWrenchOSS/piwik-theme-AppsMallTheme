@@ -2,11 +2,13 @@
 @import "less/_variables";
 @import "general/_forms";
 @import "general/_typography";
+@import "general/_admin";
+@import "general/_jqueryUI";
 @import "uibase/_headerMessage";
+@import "uibase/_siteSelect";
 
 /*
 @import "less/_mixins";
-@import "general/_admin";
 @import "general/_default";
 @import "general/_form";
 @import "ui/_components";
@@ -49,7 +51,7 @@ body {
 
 .entityTable {
     .border-radius(0px)!important;
-    border:1px solid @color-silver-l80!important;
+    border: 0;
     tr {
         &.first {
             th {
@@ -907,13 +909,12 @@ table#users {
     thead tr th {
         background: @theme-color-background-tinyContrast;
     }
+
     td {
         background: @theme-color-background-lowContrast;
     }
-    tr:hover td {
-        background: @theme-color-background-contrast;
-    }
-    tfoot tr:hover td {
+
+    tr:hover td, tfoot tr:hover td, tr.columnodd td, tr.columnodd:hover td {
         background: @theme-color-background-contrast;
     }
 }
