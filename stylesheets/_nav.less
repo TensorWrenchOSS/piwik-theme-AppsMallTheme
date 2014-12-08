@@ -27,6 +27,11 @@
             color: @theme-color-link;
         }
 
+            #root .Menu--dashboard > .Menu-tabList > li > ul li:hover a,
+            #root .Menu--dashboard > .Menu-tabList > li > ul li.sfHover a {
+                font-weight: bold;
+            }
+
 
 
 /* SECOND LEVEL */
@@ -52,3 +57,15 @@
     #root .Menu--dashboard > .Menu-tabList > li li:active > a {
     }
 
+
+
+/* THIRD LEVEL */
+
+#root .dashboardSettings ul.submenu li {
+    color: @theme-color-text-light;
+}
+
+    #root .dashboardSettings ul.submenu li.widgetpreview-choosen {
+        color: @theme-color-text;
+        background: @theme-color-background-tinyContrast;
+    }
