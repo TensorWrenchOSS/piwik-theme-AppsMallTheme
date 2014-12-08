@@ -1,0 +1,79 @@
+
+/* FIRST LEVEL */
+
+#root .Menu--dashboard {
+    border: 0;
+    border-bottom: 5px solid @theme-color-background-tinyContrast;
+}
+
+    #root .Menu--dashboard > .Menu-tabList > li {
+        border: 0;
+    }
+
+    #root .Menu--dashboard > .Menu-tabList a {
+        padding: 10px 20px 10px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+        #root .Menu--dashboard > .Menu-tabList > li:hover, 
+        #root .Menu--dashboard > .Menu-tabList > li.sfHover > a {
+            background: @theme-color-background-tinyContrast;
+            border: 0;
+        } 
+        
+        #root .Menu--dashboard > .Menu-tabList > li.sfActive > a {
+            background: @theme-color-background-tinyContrast;
+            color: @theme-color-link;
+        }
+
+            #root .Menu--dashboard > .Menu-tabList > li > ul li:hover a,
+            #root .Menu--dashboard > .Menu-tabList > li > ul li.sfHover a {
+                font-weight: bold;
+            }
+
+.sites_autocomplete .custom_select_ul_list li a:hover,
+.sites_autocomplete .custom_select_all a:hover {
+    background: @theme-color-background-lowContrast;
+}
+
+
+/* SECOND LEVEL */
+
+#root .nav_sep {
+    background: @theme-color-base-series;
+    border: 0;
+    min-height: 47px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+#root .Menu--dashboard > .Menu-tabList > li > ul li a {
+    padding: 10px 20px 10px;
+    font-size: 13px;
+    line-height: 15px;
+}
+
+    .Menu--dashboard > .Menu-tabList > li li:hover > a,
+    .Menu--dashboard > .Menu-tabList > li li.sfHover > a,
+    .Menu--dashboard > .Menu-tabList > li li:focus > a,
+    .Menu--dashboard > .Menu-tabList > li li:active > a {
+    }
+
+
+
+/* THIRD LEVEL */
+
+.dashboardSettings ul.submenu li,
+ul.widgetpreview-widgetlist, 
+ul.widgetpreview-categorylist {
+    color: @theme-color-text-lighter;
+}
+
+    .dashboardSettings ul.submenu li.widgetpreview-choosen,
+    .widgetpreview-base li.widgetpreview-choosen {
+        color: @theme-color-link;
+        background: @theme-color-background-lowContrast;
+    }
+
