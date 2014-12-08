@@ -14,6 +14,7 @@
 @import "ui/_tooltip";
 @import "ui/_charts";
 @import "ui/_map"; 
+@import "uibase/_dataTable";
 */
 
 
@@ -100,7 +101,8 @@ table.entityTable tr td a:hover {
             margin: 0;
             a {
                 .font-default(15px, 22px);
-                padding: 10px 20px 10px;
+                padding: 7px 15px 2px;
+                font-weight: bold;
             }
             > li {
                 .border-radius(0px);
@@ -113,7 +115,8 @@ table.entityTable tr td a:hover {
                         a {
                             color: @theme-color-menu-contrast-text;
                             .font-default(13px, 15px);
-                            padding: 10px 20px 10px;
+                            padding: 7px 15px 2px;
+                            font-weight: normal;
                         }
 
                         &:hover,
@@ -149,7 +152,7 @@ table.entityTable tr td a:hover {
                     > a {
                         border: 0;
                         text-decoration: none;
-                        color: @theme-color-text;
+                        color: @theme-color-link;
                         background: @theme-color-background-tinyContrast;
                     }
                 }
@@ -160,7 +163,7 @@ table.entityTable tr td a:hover {
     .nav_sep {
         background: @theme-color-base-series;
         border: 0;
-        min-height: 47px;
+        min-height: 40px;
         .border-radius(0px);
         .no-box-shadow();
     }
@@ -905,12 +908,12 @@ table#users {
         background: @theme-color-background-base;
     }
     td {
-        background: white;
+        background: @theme-color-background-base;
     }
     tr:hover td {
-        background: #f2f2f2;
+        background: @theme-color-background-base;
     }
     tfoot tr:hover td {
-        background: white;
+        background: @theme-color-background-base;
     }
 }
