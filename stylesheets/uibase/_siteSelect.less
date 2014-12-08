@@ -4,6 +4,22 @@
   margin: 0 20px 0 0;
 }
 
+.sites_autocomplete .custom_select_ul_list li a:hover,
+.sites_autocomplete .custom_select_all a:hover {
+  background: @theme-color-background-lowContrast;
+}
+
+.sites_autocomplete .custom_select_ul_list li a,
+.sites_autocomplete .custom_select_all a,
+.sites_autocomplete .custom_select_main_link > span {
+  display: inline-block;
+  max-width: 140px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 20px 0 9px;
+}
+
 /*sites_autocomplete*
 
 .sites_autocomplete {
@@ -32,19 +48,6 @@
 .autocompleteMatched {
   color: #5256BE;
   font-weight: bold;
-}
-
-.sites_autocomplete .custom_select {
-  float: left;
-  position: relative;
-  z-index: 19;
-  background: #fff url(plugins/Morpheus/images/sites_selection.png) repeat-x 0 0;
-  border: 1px solid #d4d4d4;
-  color: #255792;
-  border-radius: 4px;
-  cursor: pointer;
-  min-width: 165px;
-  padding: 5px 6px 4px;
 }
 
 .sites_autocomplete .custom_select_main_link {
@@ -98,11 +101,6 @@
   height: auto;
   display: block;
   text-decoration: none;
-}
-
-.sites_autocomplete .custom_select_ul_list li a:hover,
-.sites_autocomplete .custom_select_all a:hover {
-  background: #ebeae6;
 }
 
 .sites_autocomplete .custom_select_all a {

@@ -30,7 +30,7 @@
 
 .admin {
     h2 {
-        border-bottom: 1px solid @color-gray;
+        border-bottom: 1px solid @theme-color-background-lowContrast;
         margin-right:0;
     }
     h3 {
@@ -38,8 +38,12 @@
         .font-default(18px, 24px);
         font-weight: normal;
     }
-    a:hover {
-        text-decoration:underline;
+    a {
+        color: @theme-color-brand;
+
+        &.hover {
+            text-decoration:underline;
+        }
     }
 }
 
@@ -106,8 +110,9 @@
 }
 
 code {
-    border-color: @color-silver-l80;
+    border-color: @theme-color-background-lowContrast;
     border-left: 5px solid @theme-color-brand;
+    background-color: @theme-color-background-base;
 }
 
 #geoipdb-screen1>div>p {

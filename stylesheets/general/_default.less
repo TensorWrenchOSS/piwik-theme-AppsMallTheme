@@ -17,12 +17,6 @@ form {
     margin: 0;
 }
 
-body {
-    line-height: 1.33;
-    background-color: white;
-    color: #333;
-}
-
 ol, ul {
     list-style: none;
 }
@@ -32,14 +26,14 @@ blockquote, q {
 }
 
 code {
-  background-color:#F6F9F9;
-  border: 1px dashed;
-  border-left: 5px solid  #4B4BD5;
+  background-color: @theme-color-background-base;
+  border: 1px dashed @theme-color-background-lowContrast;
+  border-left: 5px solid @theme-color-brand;
   direction:ltr;
   display:table;
   font-size:100%;
   margin:12px 2px 0;
-  padding:5px 50px 5px 15px;
+  padding: 10px 50px 10px 15px;
   text-align:left;
   line-height:1.3em;
   font-family: "Courier New" Courier monospace;
@@ -73,16 +67,19 @@ textarea {
 }
 
 input, select, textarea {
-  border-radius: 4px;
-  border: 1px solid #d4d4d4;
-  background: #fff url(plugins/Morpheus/images/inp_bg.png) repeat-x 0 0;
-  padding: 3px 10px;
-  color: #255792;
-  margin-bottom: 3px;
+    color: @theme-color-text-light;
+    .border-radius(0px);
+    margin-left: 0;
+    padding: 8px 10px;
+    border: 0;
+    min-height: 30px;
+    .box-sizing(border-box);
+    background: @theme-color-background-lowContrast;
 }
 
 input[disabled] {
-  background: #E9E9E9 none;
+  background: @theme-color-background-tinyContrast;
+  color: @theme-color-text-lighter;
   font-style: italic;
 }
 
@@ -90,26 +87,4 @@ select {
   padding-right: 3px;
   padding-left: 7px;
   margin-right: 6px;
-}
-
-/* start piwik styles */
-body {
-    font-family: @theme-fontFamily-base;
-    font-size: 1em;
-}
-
-a {
-    color: #255792;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-#root {
-    margin: 0 10px;
-    position: relative;
-}
-
-/* Make sure the scroll bar is always displayed so the content does not shift when reloading menu with/without scrollbar */
-html {
-  overflow-y: scroll;
 }
