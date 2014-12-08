@@ -354,13 +354,13 @@ table.dataTable {
     thead {
         tr {
             th {
-                background: #fff;
+                background: @theme-color-background-tinyContrast;
                 text-transform: uppercase;
                 color: @theme-color-text;
                 .font-default(10px, 12px);
                 padding-top: 12px;
                 padding-bottom: 12px;
-                border-bottom: 1px solid @color-silver-l85;
+                border: none;
                 &.columnSorted {
                     background:  @theme-color-background-base !important;
                     .sortIcon {
@@ -396,9 +396,9 @@ table.dataTable {
     }
     tr {
         td {
-            border-color: @color-silver-l85 !important;
+            border-color: @theme-color-background-highContrast !important;
             color: @theme-color-text;
-            background: @color-silver-l95;
+            background: @theme-color-background-contrast;
 
             &:not(.value) {
               .font-default(13px, 16px);
@@ -418,7 +418,7 @@ table.dataTable {
 
             &.labelodd,
             &.columnodd {
-                background-color: @color-silver-l95 !important;
+                background-color: @theme-color-background-contrast !important;
             }
 
             a {
@@ -454,7 +454,7 @@ table.dataTable {
         }
         &.inactive-plugin td,
         &:hover td {
-            background-color: @color-silver-l95 !important;
+            background-color: @theme-color-background-contrast !important;
         }
     }
 
@@ -505,7 +505,7 @@ table.dataTable .dataTableRowActions {
 
 .dataTableFooterIcons {
   padding: 6px 8px 0px;
-  border-top: 1px solid @color-silver-l80;
+  border-top: 1px solid @theme-color-background-tinyContrast;
 }
 
 div.sparkline {
@@ -903,7 +903,7 @@ table#users {
 
 // previous style overrides
 
-#multisites table.dataTable {
+/*#multisites table.dataTable {
     thead tr th {
         background: @theme-color-background-base;
     }
@@ -916,4 +916,4 @@ table#users {
     tfoot tr:hover td {
         background: @theme-color-background-base;
     }
-}
+}*/
