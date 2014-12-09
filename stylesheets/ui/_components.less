@@ -62,6 +62,7 @@
 
     .custom_select_search {
         border: none;
+
         input {
             margin-top: -10px;
         }
@@ -90,6 +91,7 @@
             }
         }
     }
+
     .segment-nav {
         top: 30px;
         left: 30px;
@@ -101,13 +103,16 @@
 
         div > ul > li {
             padding: 5px 0;
+
             a {
                 font-weight: normal;
                 color: @theme-color-text;
                 text-shadow: none;
             }
+
             li {
-                padding: 3px 0 ;
+                padding: 3px 0;
+
                 &:hover {
                     background: @theme-color-background-tinyContrast;
                     border: 0;
@@ -117,11 +122,9 @@
                         border: 0;
                         background-color: @theme-color-background-tinyContrast;
                         padding-right: 15px;
-
                     }
                 }
             }
-
         }
     }
 
@@ -134,6 +137,7 @@
             color: @theme-color-text-lighter;
             text-transform: uppercase;
             .font-default(10px, 12px);
+
             a.dropdown {
                 color: @theme-color-text-lighter;
                 text-transform: uppercase;
@@ -144,25 +148,33 @@
         a.dropdown {
             color: @theme-color-text;
             background: url('plugins/Morpheus/images/sort_subtable_desc.png') 100% -2px no-repeat;
+
             &.ui-autocomplete-input {
                 background-position: 100% -2px;
             }
         }
     }
+
     .segment-footer {
         background: @theme-color-background-contrast;
         border: 0;
         padding: 30px;
         margin: 0 -30px -30px -30px;
+
         button {
             height: auto;
             font-weight: normal;
             min-width: 100px;
         }
 
-        a.delete {
-            color: @theme-color-brand;
+        a, a.delete {
+            color: @theme-color-text;
+
+            &:hover {
+                color: @theme-color-link-hover;
+            }
         }
+
         .segmentFooterNote, .segment-element .segment-footer .segmentFooterNote a {
             color: @theme-color-text-light;
         }
@@ -262,14 +274,14 @@
 
     /* Orange alerts box */
     &.header_alert {
-        background: url(plugins/Morpheus/images/ico_alert.png) no-repeat 5px 5px;
+        background: @theme-color-background-base url(plugins/Morpheus/images/ico_alert.png) no-repeat 5px 5px;
         color: @graph-colors-data-series4;
         a { color: @graph-colors-data-series4; }  
     }
 
     /* Blue info box */
     &.header_info {
-        background: url(plugins/Morpheus/images/ico_info.png) no-repeat 5px 5px;
+        background: @theme-color-background-base url(plugins/Morpheus/images/ico_info.png) no-repeat 5px 5px;
         color: @graph-colors-data-series6;
         a { color: @graph-colors-data-series6; }  
     }

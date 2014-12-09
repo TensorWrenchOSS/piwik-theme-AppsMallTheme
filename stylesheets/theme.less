@@ -49,8 +49,8 @@ body {
 }
 
 .entityTable {
-    .border-radius(0px)!important;
-    border: 0;
+    border: none !important;
+
     tr {
         &.first {
             th {
@@ -650,7 +650,6 @@ div.sparkline {
         padding: 8px 10px;
         min-height: 30px;
         .box-sizing(border-box);
-        border: 1px solid @color-silver-l80;
         .opacity(1);
 
         &[type="text"] {
@@ -1117,5 +1116,14 @@ table#users {
             border-color: @theme-color-brand;
             color: @theme-color-link-hover;
         }
+    }
+}
+
+.pluginslist .plugin {
+    background: @theme-color-background-tinyContrast;
+    border: 0;
+
+    .metadataSeparator {
+        background-color: @theme-color-background-highContrast;
     }
 }
