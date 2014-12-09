@@ -4,11 +4,7 @@
 }
 
 .bar-graph-colors[data-name=grid-border] {
-  color: #f00;
-}
-
-.bar-graph-colors[data-name=grid-border] {
-  color: @theme-color-background-highContrast;
+  color: @theme-color-background-contrast;
 }
 
 .bar-graph-colors[data-name=series1] {
@@ -44,7 +40,7 @@
 }
 
 .bar-graph-colors[data-name=ticks] {
-  color: #ccc;
+  color: @theme-color-background-highContrast;
 }
 
 .bar-graph-colors[data-name=single-metric-label] {
@@ -57,7 +53,7 @@
 }
 
 .pie-graph-colors[data-name=grid-border] {
-  color: @theme-color-background-highContrast;
+  color: @theme-color-background-contrast;
 }
 
 .pie-graph-colors[data-name=series1] {
@@ -93,7 +89,7 @@
 }
 
 .pie-graph-colors[data-name=ticks] {
-  color: #ccc;
+  color: @theme-color-background-highContrast;
 }
 
 .pie-graph-colors[data-name=single-metric-label] {
@@ -137,22 +133,38 @@
 }
 
 .evolution-graph-colors[data-name=ticks] {
-  color: #ccc;
+  color: @theme-color-background-highContrast;
 }
 
 .evolution-graph-colors[data-name=grid-background] {
-  color: #fff;
+  color: @theme-color-background-base;
 }
 
 .evolution-graph-colors[data-name=grid-border] {
-  color: #f00;
+  color: @theme-color-background-contrast;
 }
 
 .evolution-graph-colors[data-name=ticks] {
-    color: #ccc;
+    color: @theme-color-background-highContrast;
 }
 
 .evolution-graph-colors[data-name=single-metric-label] {
     color: @theme-color-text-lighter;
 }
 
+// sparkline styles
+
+html .sparkline,
+html .sparkline:hover {
+    border-bottom: 0;
+}
+
+// sparkline colors
+
+.sparkline-colors[data-name=backgroundColor] {
+    color: @theme-color-background-base;
+}
+
+.sparkline-colors[data-name=lineColor] {
+    color: @graph-colors-data-series1;
+}

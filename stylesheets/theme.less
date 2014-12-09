@@ -1,10 +1,11 @@
 
-@import "less/_variables";
 @import "general/_default";
 @import "general/_forms";
 @import "general/_typography";
 @import "general/_admin";
 @import "general/_jqueryUI";
+@import "less/_variables";
+@import "ui/_charts";
 @import "uibase/_headerMessage";
 @import "uibase/_siteSelect";
 
@@ -14,7 +15,6 @@
 @import "ui/_components";
 @import "ui/_popups";
 @import "ui/_tooltip";
-@import "ui/_charts";
 @import "ui/_map"; 
 @import "uibase/_dataTable";
 */
@@ -579,7 +579,7 @@ div.sparkline {
             font-weight: bold;
         }
 
-        &.hover {
+        &:hover {
             .widgetName {
                 color: @theme-color-text-light;
             }

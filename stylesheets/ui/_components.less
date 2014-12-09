@@ -276,6 +276,16 @@
 
 .jqplot-seriespicker-popover {
     .box-shadow-1(none);
+    background-color: @theme-color-background-base;
+    border: 1px solid @theme-color-background-contrast;
+    border-radius: 0;
+    color: @theme-color-link;
+
+    > p:hover > label,
+    :checked + label,
+    p.headline {
+        color: @theme-color-text;
+    }
 }
 
 // transition box
