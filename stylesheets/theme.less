@@ -134,6 +134,7 @@ table.entityTable tr td a:hover {
                         &.sfHover {
                             a {
                                 color: @theme-color-menu-contrast-textActive;
+                                text-decoration: none;
                             }
 
                         }
@@ -1080,4 +1081,25 @@ table#users {
 
 #content:not(.admin) h2, .widget h2 {
     padding: 20px 0;
+}
+
+.zenMode .quick-access {
+    padding: 0;
+}
+
+.zenMode .Menu--dashboard > .Menu-tabList > li.sfHover ul, 
+.zenMode .Menu--dashboard > .Menu-tabList > li:hover ul {
+    background: @theme-color-background-lowContrast;
+    border: 0;
+    .box-shadow (0 6px 12px, rgba(25, 31, 37, 0.175));
+}
+
+.zenMode .Menu--dashboard > .Menu-tabList > li li {
+    padding: 5px 25px 5px 21px;
+    border-left: 4px solid transparent;
+
+    &:hover {
+        background: none;
+        border-color: @theme-color-brand;
+    }
 }
