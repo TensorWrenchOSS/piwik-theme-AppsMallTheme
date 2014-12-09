@@ -54,18 +54,14 @@
     background: @theme-color-background-lowContrast;
     border-color: @theme-color-background-lowContrast;
     .box-shadow (0 6px 12px, rgba(25, 31, 37, 0.175));
+    padding: 30px;
 
     .segment-add-row {
         .border-radius(5px);
     }
 
-    .segment-nav {
-        h4.visits {
-            background: url('plugins/Morpheus/images/segment-users.png') no-repeat 3px 0px;
-        }
-    }
-
     .custom_select_search {
+        border: none;
         input {
             margin-top: -10px;
         }
@@ -95,6 +91,14 @@
         }
     }
     .segment-nav {
+        top: 30px;
+        left: 30px;
+        margin-bottom: 40px;
+
+        h4.visits {
+            background: url('plugins/Morpheus/images/segment-users.png') no-repeat 3px 0px;
+        }
+
         div > ul > li {
             padding: 5px 0;
             a {
@@ -147,6 +151,9 @@
     }
     .segment-footer {
         background: @theme-color-background-contrast;
+        border: 0;
+        padding: 30px;
+        margin: 0 -30px -30px -30px;
         button {
             height: auto;
             font-weight: normal;
