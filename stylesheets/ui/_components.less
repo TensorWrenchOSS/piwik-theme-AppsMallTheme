@@ -228,13 +228,9 @@
     display: block;
     height: auto;
     font-weight: normal;
-    line-height: 20px;
-    padding: 15px 10px 15px 40px;
-    font-size: 16px;
     border-radius: 0;
-    border: 0;
-    background: @theme-color-brand;
-    color: #fff;
+    border: 1px solid @theme-color-background-lowContrast;
+    background-color: @theme-color-background-base;
 
     &:hover, &.active {
         width: auto;
@@ -257,22 +253,17 @@
 
     /* Orange alerts box */
     &.header_alert {
-        background: @graph-colors-data-series4 url(plugins/Morpheus/images/ico_alert.png) no-repeat 10px 10px;
-        color: #fff;
-        a { color: #fff; }  
+        background: url(plugins/Morpheus/images/ico_alert.png) no-repeat 10px 10px;
+        color: @graph-colors-data-series4;
+        a { color: @graph-colors-data-series4; }  
     }
 
     /* Blue info box */
     &.header_info {
-        background: @graph-colors-data-series6 url(plugins/Morpheus/images/ico_info.png) no-repeat 10px 10px;
-        color: #fff;
-        a { color: #fff; }  
+        background: url(plugins/Morpheus/images/ico_info.png) no-repeat 10px 10px;
+        color: @graph-colors-data-series6;
+        a { color: @graph-colors-data-series6; }  
     }
-}
-
-.top_controls #header_message {
-    right: -40px;
-    top: -40px;
 }
 
 .ui-menu {
