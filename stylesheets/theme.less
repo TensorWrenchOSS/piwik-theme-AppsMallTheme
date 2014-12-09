@@ -72,20 +72,26 @@ table.entityTable tr td a:hover {
     #header {
         margin: 0 15px;
         #topBars {
+            color: @theme-color-background-contrast;
+
             a {
-                color: @theme-color-link;
+                color: @theme-color-text;
                 text-decoration: none;
+
+                &:hover {
+                    color: @theme-color-link-hover;
+                }
             }
         }
 
         .topBarElem {
             padding: 0 10px;
             position: relative;
-            color: @theme-color-text-lighter;
+            color: @theme-color-text;
 
             strong {
                 font-weight: normal;
-                color: @theme-color-text;
+                color: @theme-color-text-lighter;
             }
         }
     }
@@ -94,6 +100,7 @@ table.entityTable tr td a:hover {
         margin-right: 10px;
         label {
             padding-top: 9px;
+            color: @theme-color-text-lighter;
             .font-default(13px, 15px);
         }
     }
