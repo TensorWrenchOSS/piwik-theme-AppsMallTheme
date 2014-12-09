@@ -952,11 +952,12 @@ table#users {
     .items {
         z-index: 21;
         position: absolute;
-        right: 0;
+        top: 20px;
+        right: -5px;
         max-height: 400px;
         overflow-y: auto;
         overflow-x: hidden;
-        min-width: 260px;
+        min-width: 200px;
         padding: 15px 0 !important;
         font-size: 14px;
         font-weight: 300;
@@ -998,7 +999,7 @@ table#users {
         .item {
             display: block;
             text-decoration: none !important;
-            font-size: 11px;
+            font-size: 14px;
             float: none;
             text-align: left;
             padding: 5px 25px 5px 21px !important;
@@ -1021,11 +1022,8 @@ table#users {
             &.separator {
                 padding: 0px !important;
                 border-bottom: 0px;
-                color: @theme-color-text-lighter;
-                height: 1px;
+                border-color: @theme-color-background-tinyContrast;
                 margin: 9px 20px;
-                overflow: hidden;
-                background-color: @theme-color-background-tinyContrast;
             }
 
             &.separator,
@@ -1033,6 +1031,7 @@ table#users {
                 opacity: 0.5;
                 cursor: default;
                 font-style: italic;
+                color: @theme-color-text-lighter !important;
 
                 &:hover {
                     background: @theme-color-background-lowContrast;
