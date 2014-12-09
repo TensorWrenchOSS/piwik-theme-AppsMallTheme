@@ -79,8 +79,10 @@ table.entityTable tr td a:hover {
         }
 
         .topBarElem {
-          padding: 0 3px;
-          color: @theme-color-text-lighter;
+            padding: 0 10px;
+            position: relative;
+            color: @theme-color-text-lighter;
+
             strong {
                 font-weight: normal;
                 color: @theme-color-text;
@@ -922,17 +924,13 @@ table#users {
 .menuDropdown {
     display: inline-block;
     padding-right: 14px;
-    color: #009dd3;
+    color: @theme-color-background-tinyContrast;
 
     .title {
         position: relative;
         cursor: pointer;
-        font-weight: bold;
         font-size: 14px;
-        font-weight: 300;
-        line-height: 1.42857143;
         color: @theme-color-brand;
-        white-space: nowrap;
 
         &:after {
             content: '';
@@ -954,6 +952,7 @@ table#users {
     .items {
         z-index: 21;
         position: absolute;
+        right: 0;
         max-height: 400px;
         overflow-y: auto;
         overflow-x: hidden;
@@ -1007,33 +1006,33 @@ table#users {
             clear: both;
             font-weight: normal;
             line-height: 1.42857143;
-            color: @theme-color-text;
+            color: @theme-color-text !important;
 
-            &:hover {
-                color: @theme-color-link-hover;
+            &:hover, &.active {
+                color: @theme-color-link-hover !important;
                 border-left-color: @theme-color-brand;
-            }
-
-            &.active {
-                color: @theme-color-link-hover;
-                border-left-color: @theme-color-brand;
+                background: none;
             }
 
             &.category {
-                color: @theme-color-text-light !important;
+                color: @theme-color-brand !important;
             }
 
             &.separator {
                 padding: 0px !important;
                 border-bottom: 0px;
-                margin: 0px;
                 color: @theme-color-text-lighter;
+                height: 1px;
+                margin: 9px 20px;
+                overflow: hidden;
+                background-color: @theme-color-background-tinyContrast;
             }
 
             &.separator,
             &.disabled {
                 opacity: 0.5;
                 cursor: default;
+                font-style: italic;
 
                 &:hover {
                     background: @theme-color-background-lowContrast;
