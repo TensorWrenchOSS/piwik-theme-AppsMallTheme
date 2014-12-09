@@ -1085,10 +1085,12 @@ table#users {
 
 .zenMode .quick-access {
     padding: 0;
+    margin: 0 20px;
 }
 
-.zenMode .Menu--dashboard > .Menu-tabList > li.sfHover ul, 
-.zenMode .Menu--dashboard > .Menu-tabList > li:hover ul {
+#root .zenMode .Menu--dashboard > .Menu-tabList > li ul, 
+#root .zenMode .Menu--dashboard > .Menu-tabList > li.sfHover ul, 
+#root .zenMode .Menu--dashboard > .Menu-tabList > li:hover ul {
     background: @theme-color-background-lowContrast;
     border: 0;
     min-width: 200px;
@@ -1096,7 +1098,7 @@ table#users {
     .box-shadow (0 6px 12px, rgba(25, 31, 37, 0.175));
 }
 
-.zenMode .Menu--dashboard > .Menu-tabList > li li {
+#root .zenMode .Menu--dashboard > .Menu-tabList > li li {
     padding: 0;
     margin: 0;
 
@@ -1107,7 +1109,8 @@ table#users {
 
     a {
         padding: 5px 25px 5px 21px;
-        line-height: 1.42857143;
+        line-height: 1.42857143 !important;
+        font-size: 14px;
         border-left: 4px solid transparent;
         color: @theme-color-text;
 
