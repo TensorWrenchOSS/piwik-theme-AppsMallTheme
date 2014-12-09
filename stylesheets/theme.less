@@ -228,7 +228,7 @@ table.entityTable tr td a:hover {
 
 .segmentEditorPanel {
   border: 1px solid @theme-color-background-lowContrast;
-  background: @theme-color-background-base;
+  background: @theme-color-background-tinyContrast;
   padding: 8px 10px 8px 10px;
   .border-radius(0px);
   .segmentationTitle {
@@ -238,15 +238,15 @@ table.entityTable tr td a:hover {
     position: relative;
   }
   .dropdown-body {
-    background:#fff;
+    background: @theme-color-background-tinyContrast;
     padding:0 10px;
     .border-radius(0px);
-    border: 1px solid @color-silver-l80;
+    border: 1px solid @theme-color-background-lowContrast;
     border-top-width: 0px;
   }
   &:hover .dropdown-body {
-    background:#fff;
-    border-color: @color-silver-l80;
+    background: @theme-color-background-tinyContrast;
+    border-color: @theme-color-background-lowContrast;
   }
   .segmentationContainer {
     > span > strong {
@@ -256,7 +256,7 @@ table.entityTable tr td a:hover {
       li {
         font-weight: normal;
         .font-default(12px, 14px) !important;
-        color: @color-silver-l30;
+        color: @theme-color-text-light;
       }
 
       ul li:hover  {
@@ -280,8 +280,8 @@ table.entityTable tr td a:hover {
           .font-default(13px, 16px);
           color: @theme-color-text-light;
           &:hover {
-              border-color: @color-silver-l80 !important;
-              background: #fff !important;
+              border-color: @theme-color-brand !important;
+              background: @theme-color-background-lowContrast !important;
               .border-radius(0px);
           }
           }
@@ -339,7 +339,7 @@ table.entityTable tr td a:hover {
 
 .rss-date {
     display: block;
-    color: @color-silver-l60;
+    color: @theme-color-text-light;
     .font-default(11px, 14px);
     margin-top: 15px;
 }
@@ -916,5 +916,129 @@ table#users {
 
     tr:hover td, tfoot tr:hover td, tr.columnodd td, tr.columnodd:hover td {
         background: @theme-color-background-contrast;
+    }
+}
+
+.menuDropdown {
+    display: inline-block;
+    padding-right: 14px;
+    color: #009dd3;
+
+    .title {
+        position: relative;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.42857143;
+        color: @theme-color-brand;
+        white-space: nowrap;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            right: -15px;
+            color: @theme-color-brand;
+            display: inline;
+            content: " \25BC";
+            font-size: 1px;
+            height: 0px;
+            width: 0px;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 5px solid @theme-color-brand;
+        }
+    }
+
+    .items {
+        z-index: 21;
+        position: absolute;
+        max-height: 400px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        min-width: 260px;
+        padding: 15px 0 !important;
+        font-size: 14px;
+        font-weight: 300;
+        background: @theme-color-background-lowContrast;
+        border: 0 !important;
+        .box-shadow (0 6px 12px, rgba(25, 31, 37, 0.175);
+
+        .search {
+            margin: 15px 6px 10px 6px;
+            display: block;
+
+            .search_ico {
+              position: absolute;
+              right: 25px;
+              top: 22px;
+              margin: 0px;
+              left: initial;
+            }
+
+            .reset {
+              position: absolute;
+              top: 25px;
+              cursor: pointer;
+              margin: 0px;
+              right: 25px;
+              left: initial;
+            }
+
+            input {
+              margin: 0px;
+              width: 100%;
+
+                &::-ms-clear {
+                  display: none;
+                }
+            }
+        }
+
+        .item {
+            display: block;
+            text-decoration: none !important;
+            font-size: 11px;
+            float: none;
+            text-align: left;
+            padding: 5px 25px 5px 21px !important;
+            border-left: 4px solid transparent;
+            clear: both;
+            font-weight: normal;
+            line-height: 1.42857143;
+            color: @theme-color-text;
+
+            &:hover {
+                color: @theme-color-link-hover;
+                border-left-color: @theme-color-brand;
+            }
+
+            &.active {
+                color: @theme-color-link-hover;
+                border-left-color: @theme-color-brand;
+            }
+
+            &.category {
+                color: @theme-color-text-light !important;
+            }
+
+            &.separator {
+                padding: 0px !important;
+                border-bottom: 0px;
+                margin: 0px;
+                color: @theme-color-text-lighter;
+            }
+
+            &.separator,
+            &.disabled {
+                opacity: 0.5;
+                cursor: default;
+
+                &:hover {
+                    background: @theme-color-background-lowContrast;
+                }
+            }
+        }
     }
 }
