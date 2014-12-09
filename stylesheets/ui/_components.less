@@ -51,8 +51,9 @@
 }
 
 .segment-element {
-    background: @color-white;
-    border-color: @color-silver-l80;
+    background: @theme-color-background-lowContrast;
+    border-color: @theme-color-background-lowContrast;
+    .box-shadow (0 6px 12px, rgba(25, 31, 37, 0.175));
 
     .segment-add-row {
         .border-radius(5px);
@@ -98,19 +99,19 @@
             padding: 5px 0;
             a {
                 font-weight: normal;
-                color: #333333;
+                color: @theme-color-text;
                 text-shadow: none;
             }
             li {
                 padding: 3px 0 ;
                 &:hover {
-                    background: #f2f2f2;
+                    background: @theme-color-background-tinyContrast;
                     border: 0;
-                     padding: 4px 0 3px;
+                    padding: 4px 0 3px;
 
                     a {
                         border: 0;
-                        background-color: #f2f2f2;
+                        background-color: @theme-color-background-tinyContrast;
                         padding-right: 15px;
 
                     }
@@ -126,11 +127,11 @@
         text-transform: uppercase;
 
         h4 {
-            color: @color-silver-l30;
+            color: @theme-color-text-lighter;
             text-transform: uppercase;
             .font-default(10px, 12px);
             a.dropdown {
-                color: @color-silver-l30;
+                color: @theme-color-text-lighter;
                 text-transform: uppercase;
                 .font-default(10px, 12px);
             }
@@ -145,7 +146,7 @@
         }
     }
     .segment-footer {
-        background: @color-white;
+        background: @theme-color-background-contrast;
         button {
             height: auto;
             font-weight: normal;
@@ -216,22 +217,62 @@
 
         }
     }
-}
 
+}/* About Piwik box top right */
 #header_message {
-    border: 1px solid @color-silver-l80;
-    padding: 8px 10px 8px 10px;
+    z-index: 0;
+    cursor: default;
+    position: absolute;
+    right: 0px;
+    overflow: hidden;
+    display: block;
     height: auto;
-    background: #fff;
-    .border-radius(0px);
+    font-weight: normal;
+    line-height: 20px;
+    padding: 15px 10px 15px 40px;
+    font-size: 16px;
+    border-radius: 0;
+    border: 0;
+    background: @theme-color-brand;
+    color: #fff;
+
+    &:hover, &.active {
+        width: auto;
+        height: auto;
+        z-index: 150;
+        
+        .header_short { display: none; }
+        .header_full { display: block; }
+    }
+
     .header_short {
-        .font-default(10px, 12px);
-        text-transform: uppercase;
+        display: block;
+        white-space: nowrap;
     }
 
     .header_full {
-        .font-default(12px, 18px);
+        display: none;
+        line-height: 20px;
     }
+
+    /* Orange alerts box */
+    &.header_alert {
+        background: @graph-colors-data-series4 url(plugins/Morpheus/images/ico_alert.png) no-repeat 10px 10px;
+        color: #fff;
+        a { color: #fff; }  
+    }
+
+    /* Blue info box */
+    &.header_info {
+        background: @graph-colors-data-series6 url(plugins/Morpheus/images/ico_info.png) no-repeat 10px 10px;
+        color: #fff;
+        a { color: #fff; }  
+    }
+}
+
+.top_controls #header_message {
+    right: -40px;
+    top: -40px;
 }
 
 .ui-menu {
