@@ -1,15 +1,32 @@
-.ui-dialog-title {
-    color: @theme-color-text;
-    font-weight: normal;
-}
 
-.ui-dialog .ui-widget-header {
-    color: @theme-color-text;
-    .font-default(18px, 24px);
-    font-weight: bold;
+.ui-dialog {
 
-    button {
-        background: transparent !important;
+    .ui-widget-header {
+        color: @theme-color-text;
+        .font-default(18px, 24px);
+        font-weight: bold;
+
+        .ui-dialog-title {
+            color: @theme-color-text;
+            font-weight: normal;
+        }
+
+        button, button:hover, .add-trusted-host:hover, .add-cors-host:hover, input[type="submit"]:hover, button[type="button"]:hover, .submit:hover {
+            background: transparent !important;
+        }
+    }
+
+    ~ .ui-dialog {
+        border: 0;
+    }
+
+
+    // graph colors
+    .bar-graph-colors[data-name=grid-background],
+    .pie-graph-colors[data-name=grid-background],
+    .evolution-graph-colors[data-name=grid-background],
+    .sparkline-colors[data-name=backgroundColor] {
+        color: @theme-color-background-tinyContrast;
     }
 }
 
@@ -21,7 +38,7 @@
 }
 
 .ui-widget-content {
-
+    border: 0;
     background: @theme-color-background-tinyContrast;
     color: @theme-color-text;
     .box-shadow-1(0 6px 12px @theme-color-widget-shadow);
@@ -49,9 +66,9 @@ button.ui-state-default, .ui-widget-content button.ui-state-default, .ui-widget-
 }
 
 .ui-menu .ui-menu-item a.ui-state-focus {
-    background: @color-silver-l90;
+    background: none
 }
 
-button:hover, .add-trusted-host:hover, .add-cors-host:hover, input[type="submit"]:hover, button[type="button"]:hover, .submit:hover {
-    background-color: @theme-color-brand !important;
+.rowevolution table.metrics td.text span.details {
+    color: @theme-color-text-light;
 }
