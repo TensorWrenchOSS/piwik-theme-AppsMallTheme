@@ -7,6 +7,10 @@
     color: @theme-color-text;
     .font-default(18px, 24px);
     font-weight: bold;
+
+    button {
+        background: transparent !important;
+    }
 }
 
 #feedback-sent,
@@ -14,6 +18,13 @@
     a {
         color: @theme-color-link;
     }
+}
+
+.ui-widget-content {
+
+    background: @theme-color-background-tinyContrast;
+    color: @theme-color-text;
+    .box-shadow-1(0 6px 12px @theme-color-widget-shadow);
 }
 
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
