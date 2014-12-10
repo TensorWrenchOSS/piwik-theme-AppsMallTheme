@@ -1,10 +1,12 @@
 //colors calendar
-@calendarHeaderBackground: @theme-color-background-lowContrast;
+@calendarHeaderBackground: @theme-color-background-tinyContrast;
 @calendarHeaderColor: @theme-color-text-light;
 @calendarCurrentStateHover: @theme-color-brand;
-@calendarBorder: @theme-color-background-lowContrast;
+@calendarBorder: @theme-color-background-tinyContrast;
 
 .ui-datepicker {
+
+    border: 0 !important;
 
     th, th.ui-datepicker-week-end {
         background: @calendarHeaderBackground !important;
@@ -14,7 +16,7 @@
     .ui-state-default {
         border-color: @calendarBorder !important;
         background: @theme-color-background-base !important;
-        color: @theme-color-text;
+        color: @theme-color-text !important;
     }
 
     .ui-datepicker-header {
@@ -33,11 +35,16 @@
     .ui-datepicker-title select {
         font-size: 10px;
     }
+
+    td.ui-datepicker-week-end .ui-state-default {
+        background: @theme-color-background-lowContrast !important;
+    }
+
+    td.ui-datepicker-current-period a.ui-state-default, td .ui-state-active, .ui-datepicker td.ui-datepicker-current-period a.ui-state-active, .ui-datepicker td.ui-datepicker-week-end .ui-state-active, .ui-datepicker td.ui-datepicker-other-month.ui-datepicker-current-period {
+        background: @calendarCurrentStateHover !important;
+    }
 }
 
-.ui-datepicker td.ui-datepicker-current-period a.ui-state-default, td .ui-state-active, .ui-datepicker td.ui-datepicker-current-period a.ui-state-active, .ui-datepicker td.ui-datepicker-week-end .ui-state-active, .ui-datepicker td.ui-datepicker-other-month.ui-datepicker-current-period {
-    background: @calendarCurrentStateHover !important;
-}
 
 //add new segment
 .add_new_segment,
