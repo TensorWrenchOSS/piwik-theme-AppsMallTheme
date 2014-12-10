@@ -192,6 +192,10 @@ table.entityTable tr td a:hover {
     .border-radius(0px);
     .font-default(10px, 12px);
     
+    &:hover {
+        border-color: @theme-color-background-contrast;
+    }
+
     > span {
         position: relative;
         background: none;
@@ -257,7 +261,7 @@ table.entityTable tr td a:hover {
 
 .segmentEditorPanel {
     border: 1px solid @theme-color-background-lowContrast;
-    background: @theme-color-background-tinyContrast;
+    background: @theme-color-background-base;
     padding: 8px 10px 8px 10px;
     .border-radius(0px);
 
@@ -276,9 +280,13 @@ table.entityTable tr td a:hover {
         border-top-width: 0px;
     }
 
-    &:hover .dropdown-body {
-        background: @theme-color-background-tinyContrast;
-        border-color: @theme-color-background-lowContrast;
+    &:hover {
+        border-color: @theme-color-background-contrast;
+
+        .dropdown-body {
+            background: @theme-color-background-tinyContrast;
+            border-color: @theme-color-background-lowContrast;
+        }
     }
 
     .segmentationContainer {
