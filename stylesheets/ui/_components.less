@@ -5,7 +5,6 @@
 @calendarBorder: @theme-color-background-tinyContrast;
 
 .ui-datepicker {
-
     border: 0 !important;
 
     th, th.ui-datepicker-week-end {
@@ -17,11 +16,6 @@
         border-color: @calendarBorder !important;
         background: @theme-color-background-base !important;
         color: @theme-color-text !important;
-
-        &.ui-state-hover {
-            color: @theme-color-link !important;
-            background: @theme-color-background-base !important;
-        }
     }
 
     .ui-datepicker-header {
@@ -32,6 +26,7 @@
 
     .ui-datepicker-calendar {
         border: 0;
+
         thead {
             border-bottom: 1px solid @calendarBorder;
         }
@@ -51,8 +46,9 @@
     }
 
     .ui-datepicker td .ui-state-hover, .ui-datepicker .ui-datepicker td.ui-datepicker-current-period a.ui-state-hover, .ui-datepicker td.ui-datepicker-week-end .ui-state-hover {
-        background: @theme-color-base-series;
-        color: @theme-color-link-hover;
+        background: @theme-color-background-base !important;
+        color: @theme-color-link !important;
+    }
 }
 
 
