@@ -104,16 +104,23 @@ button[type="button"],
     > ul {
         position: relative;
         top: -6px;
+        background: @theme-color-background-base;
         > li {
             width: 25px;
+            background: @theme-color-background-base;
+            border-color: @theme-color-background-lowContrast;
+
+            &:hover {
+                background: @theme-color-background-lowContrast;
+            }
         }
     }
     > div {
         .border-radius(2px);
-        background-color: #fff;
         .font-default(10px, 12px);
         background: none;
         padding: 2px 14px 2px 1px;
+        border-color: @theme-color-background-lowContrast;
         span {
             position: relative;
             background: none;
