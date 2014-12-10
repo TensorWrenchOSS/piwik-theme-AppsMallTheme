@@ -44,10 +44,19 @@
 
     td.ui-datepicker-week-end .ui-state-default {
         background: @theme-color-background-lowContrast !important;
+
+        &.ui-state-hover {
+            color: @theme-color-link !important;
+            background: @theme-color-background-base !important;
+        }
     }
 
     td.ui-datepicker-current-period a.ui-state-default, td .ui-state-active, .ui-datepicker td.ui-datepicker-current-period a.ui-state-active, .ui-datepicker td.ui-datepicker-week-end .ui-state-active, .ui-datepicker td.ui-datepicker-other-month.ui-datepicker-current-period {
         background: @calendarCurrentStateHover !important;
+    }
+
+    .ui-datepicker-month:disabled {
+        background: @theme-color-background-contrast !important;
     }
 }
 
