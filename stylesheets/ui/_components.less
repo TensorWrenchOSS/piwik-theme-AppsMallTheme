@@ -1,8 +1,8 @@
 //colors calendar
-@calendarHeaderBackground: @theme-color-background-tinyContrast;
+@calendarHeaderBackground: @theme-color-background-base;
 @calendarHeaderColor: @theme-color-text-light;
 @calendarCurrentStateHover: @theme-color-brand;
-@calendarBorder: @theme-color-background-tinyContrast;
+@calendarBorder: @theme-color-background-base;
 
 .ui-datepicker {
     border: 0 !important;
@@ -16,6 +16,11 @@
         border-color: @calendarBorder !important;
         background: @theme-color-background-base !important;
         color: @theme-color-text !important;
+
+        &.ui-state-hover {
+            color: @theme-color-link !important;
+            background: @theme-color-background-base !important;
+        }
     }
 
     .ui-datepicker-header {
@@ -43,11 +48,6 @@
 
     td.ui-datepicker-current-period a.ui-state-default, td .ui-state-active, .ui-datepicker td.ui-datepicker-current-period a.ui-state-active, .ui-datepicker td.ui-datepicker-week-end .ui-state-active, .ui-datepicker td.ui-datepicker-other-month.ui-datepicker-current-period {
         background: @calendarCurrentStateHover !important;
-    }
-
-    .ui-datepicker td .ui-state-hover, .ui-datepicker .ui-datepicker td.ui-datepicker-current-period a.ui-state-hover, .ui-datepicker td.ui-datepicker-week-end .ui-state-hover {
-        background: @theme-color-background-base !important;
-        color: @theme-color-link !important;
     }
 }
 
