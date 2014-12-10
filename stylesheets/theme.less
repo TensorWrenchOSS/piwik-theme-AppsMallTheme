@@ -398,6 +398,7 @@ table.dataTable {
                 .font-default(10px, 12px);
                 padding-top: 12px;
                 padding-bottom: 12px;
+                vertical-align: middle;
                 border: none;
                 &.columnSorted {
                     background:  @theme-color-background-base !important;
@@ -498,9 +499,20 @@ table.dataTable {
             background-color: @theme-color-background-contrast !important;
         }
     }
+}
 
-    &.dataTableVizVisitorLog {
+#content:not(.admin) table.dataTable th.sortable, .widget table.dataTable th.sortable {
+    background: @theme-color-background-tinyContrast !important;
+}
 
+.tableConfiguration {
+    ul li {
+        background: @theme-color-background-base;
+        border-color: @theme-color-background-lowContrast;
+    }
+
+    div.configItem:hover {
+        background: @theme-color-background-lowContrast;
     }
 }
 
@@ -588,6 +600,7 @@ div.sparkline {
 
 .widget {
     border: 0;
+    margin: 25px 10px;
     background: @theme-color-background-tinyContrast;
     .border-radius(3px);
     .font-default(13px, 18px);
@@ -607,12 +620,12 @@ div.sparkline {
     }
 
     .widgetTop {
-        background: @theme-color-background-lowContrast;
+        background: @theme-color-brand;
         border: 0;
 
         .widgetName {
             .font-default(15px, 18px);
-            color: @theme-color-text-lighter;
+            color: @theme-color-text;
             text-shadow: none;
             padding: 10px 15px 5px;
             font-weight: bold;
@@ -620,7 +633,7 @@ div.sparkline {
 
         &:hover {
             .widgetName {
-                color: @theme-color-text-light;
+                color: @theme-color-link-hover;
             }
         }
     }
