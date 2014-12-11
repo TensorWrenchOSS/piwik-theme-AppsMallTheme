@@ -66,3 +66,88 @@
 .realtime-map[data-name=white-bg] {
     color: @theme-color-background-base !important;
 }
+
+
+/*
+ * Kartograph map
+ */
+
+.UserCountryMap_map svg path {
+    stroke-linejoin: round;
+}
+
+.UserCountryMap_map svg .countries {
+    cursor: pointer;
+    stroke-width: 0.5px;
+    stroke: @theme-color-background-tinyContrast !important;
+}
+
+.UserCountryMap_map svg .context {
+    stroke: @theme-color-background-tinyContrast !important;
+    fill: @theme-color-background-contrast !important;
+    stroke-width: 0.5px;
+}
+
+.UserCountryMap_map svg .context-clickable {
+    cursor: pointer;
+    stroke: @theme-color-background-tinyContrast !important;
+    fill: @theme-color-background-highContrast !important;
+    stroke-width: 0.5px;
+}
+
+.UserCountryMap_map svg .context-clickable:hover {
+    fill: @theme-color-brand;
+}
+
+.UserCountryMap_map svg .regionBG {
+    stroke-width: 6px;
+    stroke: @theme-color-background-contrast;
+    fill: none;
+}
+
+.UserCountryMap_map svg .regionBG-fill {
+    stroke: @theme-color-background-lowContrast;
+    stroke-width: 0.2px;
+    fill: @theme-color-background-lowContrast;
+}
+
+.UserCountryMap_map svg .regionBG-3 {
+    stroke: @theme-color-background-highContrast;
+    fill: #F2F1ED;
+    stroke-width: 1px;
+}
+
+.UserCountryMap_map svg .countryBG {
+    stroke: @theme-color-background-contrast;
+    fill: @theme-color-background-contrast;
+    stroke-width: 4px;
+}
+
+.UserCountryMap_map svg .regions {
+    stroke-width: 1px;
+}
+
+.UserCountryMap_map svg .regions2 {
+    stroke-width: 1px;
+    stroke: @theme-color-background-highContrast;
+    fill: @theme-color-background-contrast;
+}
+
+.UserCountryMap_map svg .countryLabelBg {
+    font-weight: bold;
+    font-size: 10px;
+    font-family: @theme-fontFamily-base;
+    fill: @theme-color-background-contrast;
+    stroke: @theme-color-background-contrast;
+    stroke-width: 3px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+.UserCountryMap_map svg .countryLabel {
+    font-weight: bold;
+    font-size: 10px;
+    font-family: @theme-fontFamily-base;
+    fill: @theme-color-text;
+}
+
