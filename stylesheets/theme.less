@@ -692,6 +692,10 @@ div.sparkline {
     font-weight: normal;
 }
 
+.visitor-profile-summary span, .visitor-profile-summary strong, .visitor-profile-important-visits span, .visitor-profile-important-visits strong, .visitor-profile-avatar span, .visitor-profile-avatar strong, .visitor-profile-visits-container span, .visitor-profile-visits-container strong {
+    color: @theme-color-background-highContrast;
+}
+
 .visitor-profile-info {
     .no-box-shadow() !important;
 }
@@ -720,17 +724,13 @@ div.sparkline {
     padding: 0;
     margin: 0;
     li {
+        background: @theme-color-background-base;
         margin: 0 !important;
-        background: @color-silver-l95;
         padding: 5px 10px !important;
-        border-bottom: 1px solid @color-silver-l80;
+        border-bottom: 1px solid @theme-color-background-lowContrast;
         > div {
             border: 0px !important;
             margin: 0 !important;
-        }
-
-        &:first-child {
-            border-top: 1px solid @color-silver-l80;
         }
     }
 
@@ -750,10 +750,10 @@ div.sparkline {
             }
 
             ol {
-                background: #fff !important;
+                background: @theme-color-background-tinyContrast !important;
                 border-top: 0 !important;
                 li {
-                    background: #fff !important;
+                    background: @theme-color-background-tinyContrast !important;
                     .font-default(11px, 19px);
                     font-weight: normal;
                     color: @theme-color-text-lighter;
@@ -790,6 +790,15 @@ div.sparkline {
 
         > div {
             border: 0px !important;
+        }
+
+        .visitor-profile-overview,
+        .visitor-profile-visits-info {
+            border-color: @theme-color-background-contrast;
+        }
+
+        .visitor-profile-summary, .visitor-profile-important-visits, .visitor-profile-avatar, .visitor-profile-location {
+            border-color: @theme-color-background-lowContrast;
         }
 
         .visitor-profile-image-frame {
@@ -925,16 +934,20 @@ div.sparkline {
     border-top: 2px solid @theme-color-background-contrast;
 }
 
-#visitsLive .datetime {
-    background: @theme-color-background-tinyContrast;
-    border: 0;
-}
+    #visitsLive .datetime {
+        background: @theme-color-background-tinyContrast;
+        border: 0;
+    }
 
-#visitsLive .referrer,
-#visitsLive .referrer:hover,
-#visitsLive .settings {
-    background: @theme-color-background-tinyContrast;
-}
+    #visitsLive .referrer,
+    #visitsLive .referrer:hover,
+    #visitsLive .settings {
+        background: @theme-color-background-tinyContrast;
+    }
+
+        #visitsLive .datetime, #visitsLive .country, #visitsLive .referrer, #visitsLive .settings, #visitsLive .returning {
+            border: 0;
+        }
 
 .metricValueBlock input {
     padding: 5px !important;
