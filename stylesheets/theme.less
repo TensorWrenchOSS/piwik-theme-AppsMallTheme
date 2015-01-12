@@ -920,9 +920,20 @@ div.sparkline {
     color: @theme-color-link;
 }
 
+#visitsLive {
+    border-bottom: 2px solid @theme-color-background-contrast;
+    border-top: 2px solid @theme-color-background-contrast;
+}
+
 #visitsLive .datetime {
-    background: @color-silver-l95;
-    border-top: 0;
+    background: @theme-color-background-tinyContrast;
+    border: 0;
+}
+
+#visitsLive .referrer,
+#visitsLive .referrer:hover,
+#visitsLive .settings {
+    background: @theme-color-background-tinyContrast;
 }
 
 .metricValueBlock input {
@@ -1135,4 +1146,8 @@ table#users {
     .metadataSeparator {
         background-color: @theme-color-background-highContrast;
     }
+}
+
+table.subDataTable td.labeleven, table.subDataTable td.columneven {
+    color: @theme-color-text;
 }
