@@ -69,6 +69,13 @@
     margin-left: 0px !important;
 }
 
+.segmentEditorPanel *,
+.segment-element .segment-content .segment-input select,
+.segment-element .segment-content .segment-input input {
+    font-family: @theme-fontFamily-base !important;
+}
+
+
 .segment-element {
     background: @theme-color-background-lowContrast;
     border-color: @theme-color-background-lowContrast;
@@ -93,20 +100,74 @@
             .font-default(13px, 15px);
             color: @theme-color-text;
         }
+        
+        .segment-add-row > div,
+        .segment-add-or > div {
+            border-color: @theme-color-text-lighter;
+        }
+        
+        .segment-row {
+            background-color: @theme-color-background-lowContrast !important;
+        }
 
-        .segment-add-row > div a span,
-        .segment-add-or > div a span {
-            color: @theme-color-brand;
-            text-shadow: none;
+        .segment-add-row, 
+        .segment-add-or {
+            background: @theme-color-background-lowContrast;
+            color: @theme-color-text-light;
+        
+            > div a {
+                color: @theme-color-text;
+                text-shadow: none;
+
+                span {
+                    color: @theme-color-brand;
+                    text-shadow: none;
+                }
+            }
         }
 
         .segment-input {
+            border-color: @theme-color-background-lowContrast;
+
             select, input {
                 .font-default(12px, 14px);
                 color: @theme-color-text;
                 font-weight: 500;
                 margin: 0px;
                 min-height: auto;
+            }
+        }
+
+        .segment-rows {
+            background: @theme-color-background-contrast;
+            border-color: @theme-color-background-contrast;
+        }
+        
+        .segment-or {
+            color: @theme-color-text;
+            text-shadow: none;
+            background-color: @theme-color-background-lowContrast !important;
+            
+            &:before, 
+            &:after {
+                background: @theme-color-background-contrast;
+                border: none;
+                top: 0;
+                bottom: 0;
+            }
+        }
+
+        .segment-and {
+            color: @theme-color-text;
+            text-shadow: none;
+            background-color: @theme-color-background-contrast !important;
+
+            &:before, 
+            &:after {
+                background: @theme-color-background-lowContrast;
+                border: none;
+                top: 0;
+                bottom: 0;
             }
         }
     }
@@ -309,7 +370,7 @@
 .ui-menu {
     .ui-menu-item {
         a {
-            color: @theme-color-text;
+            color: @theme-color-text !important;
             text-transform: uppercase;
             .font-default(10px, 18px);
             padding: 2px;
