@@ -4,15 +4,24 @@
         border: 0;
         background-image: none;
         padding-left: 0;
+
         > li {
             padding-bottom: 0px;
+
             > span {
                 color: @theme-color-text;
                 .font-default(18px, 26px);
                 border: 0;
                 padding: 12px 15px;
             }
+
+            &:first-child span {
+                border: 0;
+            }
+
             ul {
+                background: transparent;
+
                 li {
                     a {
                         color: @theme-color-text-lighter !important;
@@ -21,8 +30,9 @@
                         &:hover, &.active {
                             color: @theme-color-text;
                             text-decoration: none;
-                            border-left: 3px solid @theme-color-brand;
-                            padding-left: 5px;
+                            border-left: 5px solid @theme-color-brand;
+                            padding-left: 10px;
+                            background: transparent;
                         }
                     }
                 }
