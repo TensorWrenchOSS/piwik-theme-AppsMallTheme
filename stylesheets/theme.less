@@ -181,6 +181,10 @@ table.entityTable tr td a:hover {
     }
 }
 
+.enrichedHeadline .title {
+    color: @theme-color-text;
+}
+
 .dashboardSettings {
     border: 1px solid @theme-color-background-lowContrast;
     background: @theme-color-background-base;
@@ -1181,12 +1185,20 @@ table.subDataTable td.labeleven, table.subDataTable td.columneven {
 /* Login Page Theming */
 #logo .description { display: none; }
 
-.loginSection { background-color: #2B3036; }
-.loginSection h1 { color: #eeeeef; }
+#loginPage .loginSection { background-color: #2B3036; }
+#loginPage .loginSection h1 { color: #eeeeef; }
 #loginPage #nav a { color: #009DD3;}
 
 #loginPage .message_error, #loginPage .message { color: #fff; }
 #loginPage .message_error, #loginPage .message { background-color: #2B3036; }
+
+#loginPage .loginSection form input[type='text'], #loginPage .loginSection form input[type='password'] {
+    .no-box-shadow ();
+    color: @theme-color-text;
+}
+#loginPage #login_form_rememberme {
+    background: transparent;
+}
 
 .classification {
    background-color: #4f5457;
