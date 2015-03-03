@@ -67,6 +67,7 @@ table.entityTable tr td a:hover {
 
     #header {
         margin: 0 15px;
+
         #topBars {
             color: @theme-color-background-contrast;
 
@@ -94,6 +95,7 @@ table.entityTable tr td a:hover {
 
     .top_bar_sites_selector {
         margin-right: 10px;
+
         label {
             padding-top: 9px;
             color: @theme-color-text-lighter;
@@ -104,13 +106,16 @@ table.entityTable tr td a:hover {
     .Menu--dashboard {
         border: 0;
         border-bottom: 5px solid @theme-color-background-tinyContrast;
+
         > .Menu-tabList {
             margin: 0;
+
             a {
                 .font-default(15px, 22px);
                 padding: 7px 15px 2px;
                 font-weight: bold;
             }
+
             > li {
                 .border-radius(0px);
                 border: 0;
@@ -132,7 +137,6 @@ table.entityTable tr td a:hover {
                                 color: @theme-color-menu-contrast-textActive;
                                 text-decoration: none;
                             }
-
                         }
                     }
                 }
@@ -143,6 +147,7 @@ table.entityTable tr td a:hover {
                         color: @theme-color-link;
                         text-decoration: none;
                         position: relative;
+
                         &:after {
                             content: '';
                             position: absolute;
@@ -153,7 +158,6 @@ table.entityTable tr td a:hover {
                             background: @theme-color-brand;
                         }
                     }
-
                 }
 
                 &.sfHover {
@@ -178,7 +182,16 @@ table.entityTable tr td a:hover {
 
     .widgetize {
         width: auto;
+
+        .formEmbedCode {
+            border: none;
+            background: @theme-color-background-tinyContrast;
+        }
     }
+}
+
+#token_auth {
+    background: @theme-color-background-tinyContrast;
 }
 
 .enrichedHeadline .title {
@@ -1218,4 +1231,9 @@ table.subDataTable td.labeleven, table.subDataTable td.columneven {
     font-size: 18pt;
     line-height: 50px;
     color: #fff;
+}
+
+#systemCheckOptional tr,
+#systemCheckRequired tr {
+    background: @theme-color-background-tinyContrast;
 }
