@@ -1205,14 +1205,15 @@ table.subDataTable td.labeleven, table.subDataTable td.columneven {
 /* Login Page Theming */
 #logo .description { display: none; }
 
-#loginPage .loginSection { background-color: #2B3036; }
+#loginPage .loginSection { background-color: #2B3036 !important; }
 #loginPage .loginSection h1 { color: #eeeeef; }
 #loginPage #nav a { color: #009DD3;}
 
 #loginPage .message_error, #loginPage .message { color: #fff; }
 #loginPage .message_error, #loginPage .message { background-color: #2B3036; }
 
-#loginPage .loginSection form input[type='text'], #loginPage .loginSection form input[type='password'] {
+#loginPage .loginSection form input[type='text'], 
+#loginPage .loginSection form input[type='password'] {
     .no-box-shadow ();
     color: @theme-color-text;
 }
